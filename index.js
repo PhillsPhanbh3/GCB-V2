@@ -34,6 +34,7 @@ const client = new Client({
 });
 
 const { error_emote, warning_emote, success_emote } = require("./utils/emotes");
+const { loadConfig, handleMessage } = require("./events/notifications/bumpReminder");
 
 client.config = config;
 client.logger = logger;
