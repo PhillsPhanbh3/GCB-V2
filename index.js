@@ -156,6 +156,7 @@ async function InteractionHandler(interaction, type) {
 }
 
 client.helpers.InteractionHandler = InteractionHandler;
+client.on(Events.MessageCreate, handleMessage);
 
 (async () => {
   try {
@@ -167,6 +168,7 @@ client.helpers.InteractionHandler = InteractionHandler;
     }
     await client.login(token);
     logger.info(`[Startup] Logged in as ${client.user?.tag ?? "unknown user"}, please wait until terminal says Gamer Cave Bot is ready.`);
+    await loadConfig(client);
   } catch (error) {
     logger.error("An error occurred during startup/login", { error });
   }
