@@ -1,4 +1,4 @@
-const BumpReminderModel = require("../../schema/bumpReminder");
+const BumpReminderModel = require("../../schema/bumpreminder");
 const logger = require("../../utils/logger");
 
 const DISBOARD_ID = "302050872383242240";
